@@ -70,11 +70,49 @@ print(b, "é um uma string?", isinstance(biologia,int))
 
 #Lista
 lista1 = 2, 4, 6, 8, 10
+#Equivalente a lista com parenteses (), lista tupple.
 print lista1
-print lista1[=0]
-print lista1[=1]
-print lista1[=2]
-print lista1[=3]
-print lista1[=4]
-print lista1[=0:3]
-print lista1[=2:]
+print lista1[0]
+print lista1[1]
+print lista1[2]
+print lista1[3]
+print lista1[4]
+print lista1[0:3]
+print lista1[2:]
+
+#Alterando uma lista
+lista1[2]=20
+
+#Lista tupple é uma lista fixa no modificada, definida nomomento da criação da variavel em lista, seu sinal é os ();
+#Se não colocar parenteses no ato da criação da variável, equivale ao parenteses.
+
+#Criando uma lista não tupple []
+lista1 = [2,4,6,8,10]
+lista1[2]=20
+lista1
+
+#String
+palavra = 'biologia'
+palavra
+palavra[2]
+palavra[4:]
+palavra [3:6]
+#Gerando um erro
+#String são inalterados em python
+palavra [1]='y'
+
+#set {}
+#set é uma lista declarada de variáveis que passam a ser mostradas em ordem desordenada. 
+#A ordem da desordenação da lista varia de acordo com cada vez que é declarada
+
+lista2 = {2, 4, 6, 8, 10}
+lista2
+lista2 = {10, 8 , 6, 4, 2}
+lista2
+lista2 = {8, 6, 4, 10, 2}
+lista2
+#A função SET não aceita repetições, retirando na hora da impreção os números repetidos
+lista3 = {2, 2, 2, 4 , 4, 6, 8, 10}
+lista3
+
+
