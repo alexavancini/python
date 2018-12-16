@@ -152,4 +152,8 @@ str(variavel7)
 
 #Faltou acrescentar o dictionary (dict)
 
+#Download deste arquivo via terminal:
+wget https://raw.githubusercontent.com/alexavancini/python/master/arquivo1
 
+#Download pela pela página via brownser
+https://github.com/alexavancini/python
