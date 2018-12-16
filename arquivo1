@@ -37,7 +37,7 @@ variavel5 + variavel6 (bio + logia)
 
 #Lista de palavras reservadas
 import keyword
-print keyword.kwlist
+print(keyword.kwlist)
 
 #Type para testar o tipo da variável
 type(2) is int
