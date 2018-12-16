@@ -24,3 +24,23 @@ variavel5 + variavel6 (bio + logia)
 #Lista de palavras reservadas
 import keyword
 print keyword.kwlist
+
+#Type para testar o tipo da variável
+type(2) is int
+(True or False)
+
+type(2.2) is float
+(True or False)
+
+type(2+2j) is complex
+(True or False)
+
+type('teste') is str
+(True or False)
+
+type([]) is list
+(True or False)
+
+type({}) is dict
+(True or False)
+
