@@ -1,14 +1,16 @@
 #variaveis
-#valor inteiro
+
+#valor inteiro (int)
 variavel1 = 10
 variavel2 = 20
 variavel3 = 30
-#valor palavra (letras)
+
+#valor palavra (str)
 variavel4 = palavra
 variavel5 = bio
 variavel6 = logia 
 
-#Mostrar na tela o valor de uma variável
+#Mostrar na tela o valor de uma variável (print)
 print variavel1
 print variavel2
 print variavel3
@@ -31,6 +33,7 @@ type(2) is int
 
 type(2.2) is float
 (True or False)
+#float pode registrar o valor de até 15 casas decimais depois da vírgula
 
 type(2+2j) is complex
 (True or False)
@@ -38,9 +41,40 @@ type(2+2j) is complex
 type('teste') is str
 (True or False)
 
-type([]) is list
+type([2, 4, 6, 8, 10, 12]) is list
 (True or False)
 
 type({}) is dict
 (True or False)
 
+a = 10
+type(a)
+
+b = 'biologia'
+type(b)
+
+c = 2.2
+type(c)
+
+print(a, "o type de a e", type(a))
+print(b, "o type de b e", type(b))
+print(c, "o type de c e", type(c))
+
+#isistance
+print(a, "é um numero inteiro?", isinstance(a,int))
+print(a, "é um numero inteiro?", isinstance(a,str))
+print(a, "é um numero inteiro?", isinstance(a,complex))
+
+print(a, "é um numero inteiro?", isinstance(10,int))
+print(b, "é um uma string?", isinstance(biologia,int))
+
+#Lista
+lista1 = 2, 4, 6, 8, 10
+print lista1
+print lista1[=0]
+print lista1[=1]
+print lista1[=2]
+print lista1[=3]
+print lista1[=4]
+print lista1[=0:3]
+print lista1[=2:]
