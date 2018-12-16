@@ -1,0 +1,13 @@
+#Função input()
+#Criando um erro
+#O python espera que o valor do input seja direcionado para uma variavel declarada
+input()
+valor1 = input()
+valor1
+print('O valor de valor1 é: ', valor1)
+
+#Função format
+print('Eu gosto de {0} e {1}'.format('ecologia', 'aprender python'))
+print('Eu gosto de {1} e {0}'.format('ecologia', 'aprender python'))
+#Podemos com o .format especificar o nome da variavel que iremos declarar
+print('Ola {name}, {saudacao}'.format(saudacao = 'Bom dia!', name = 'Alex'))
