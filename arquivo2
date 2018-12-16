@@ -4,10 +4,26 @@
 input()
 valor1 = input()
 valor1
-print('O valor de valor1 é: ', valor1)
+valor2 = input('Digite um valor: ')
+#A função input no python está programada para declarar o valor da variavel como string
+valor2
+#'2'
+#Resolvendo este problema, podemos converter o valor utilizando conversores de outros tipos de dados
+valor2 = int(input('Digite um valor'))
+valor2
+#2
+valor2 = float(input('Digite um valor'))
+valor2
+#2.0
 
 #Função format
 print('Eu gosto de {0} e {1}'.format('ecologia', 'aprender python'))
 print('Eu gosto de {1} e {0}'.format('ecologia', 'aprender python'))
 #Podemos com o .format especificar o nome da variavel que iremos declarar
 print('Ola {name}, {saudacao}'.format(saudacao = 'Bom dia!', name = 'Alex'))
+#Podemos com a função .format definir quantas casas decimais mostrar (Como o antigo recurso sprintf() usado na linguagem C)
+x = 1.54321
+x
+print('O valor de x e %3.2f' %x)
+print('O valor de x e %3.4f' %x)
+print('O valor de x e %3.5f' %x)
