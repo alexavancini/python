@@ -15,6 +15,12 @@ valor2
 valor2 = float(input('Digite um valor'))
 valor2
 #2.0
+#Criando um erro
+int('2+5')
+#Com a função eval nós podemos converter os dados numericos entre '' em int.
+eval('2+5')
+valor3 = (2+5)
+
 
 #Função format
 print('Eu gosto de {0} e {1}'.format('ecologia', 'aprender python'))
