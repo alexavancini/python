@@ -5,15 +5,27 @@ variavel1 = 10
 variavel2 = 20
 variavel3 = 30
 
+variavel1
+variavel2
+variavel3
+
+#Operações matemáticas
+variavel1 + variavel2
+variavel1 + variavel2 + variavel3
+variavel1 + (variavel2*variavel3)
+variavel1 + (variavel2/variavel3)
+
 #valor palavra (str)
 variavel4 = palavra
 variavel5 = bio
-variavel6 = logia 
+variavel6 = logia
 
 #Mostrar na tela o valor de uma variável (print)
 print variavel1
 print variavel2
 print variavel3
+
+print variavel1, variavel4
 
 #Somar variáveis de valor inteiro
 variavel1 + variavel2 + variavel3
@@ -114,5 +126,30 @@ lista2
 #A função SET não aceita repetições, retirando na hora da impreção os números repetidos
 lista3 = {2, 2, 2, 4 , 4, 6, 8, 10}
 lista3
+#A função SET também não aceita filtrar os dados da lista com a função =[]
+lista3=[2]
+
+#Tratando os valores como convertidos entre os tipos de dados
+#Converter um valor de variavel int para str é possível
+#Mas converter um valor de variavel str em int não.
+variavel1
+varialve2
+variavel3
+variavel4
+variavel5
+str(variavel1)
+int(variavel4)
+str(variavel2)
+int(variavel5)
+#Converter uma variável int em float é possível
+float(variavel1)
+#Converter uma variável float em int é possível também
+int(2.5)
+#Converter uma variável flot em str é possível
+variavel7 = 2.5
+type(variavel7)
+str(variavel7)
+
+#Faltou acrescentar o dictionary (dict)
 
 
