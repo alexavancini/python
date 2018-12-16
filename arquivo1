@@ -1,0 +1,26 @@
+#variaveis
+#valor inteiro
+variavel1 = 10
+variavel2 = 20
+variavel3 = 30
+#valor palavra (letras)
+variavel4 = palavra
+variavel5 = bio
+variavel6 = logia 
+
+#Mostrar na tela o valor de uma variável
+print variavel1
+print variavel2
+print variavel3
+
+#Somar variáveis de valor inteiro
+variavel1 + variavel2 + variavel3
+variavel1 + (variavel2*variavel3)
+variavel1 + (variavel2/variavel3)
+
+#Concatenar variáveis de valor string
+variavel5 + variavel6 (bio + logia)
+
+#Lista de palavras reservadas
+import keyword
+print keyword.kwlist
