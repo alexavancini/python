@@ -5,22 +5,34 @@ input()
 valor1 = input()
 valor1
 valor2 = input('Digite um valor: ')
-#A função input no python está programada para declarar o valor da variavel como string
 valor2
-#'2'
+
+#Se o usuário oferecer o valor float, exemplo = 2.0 o python irá declarar a variável como flot
 #Resolvendo este problema, podemos converter o valor utilizando conversores de outros tipos de dados
+valor2 = 2.0
+valor2
+type(valor2)
+#Convertendo abaixo o valor2  que é float em int.
+int(valor2)
+#O valor acima se oferecido em formato int convertido de float será imprimido em int, mas continuará float
+valor2
+#Para converter valor 2 de float para int definnitivamente, devemos trocar a informação da variavel:
+valor2 = int(valor2)
+valor2
+#Concatenando o conversor de tipos com a função input
 valor2 = int(input('Digite um valor'))
 valor2
-#2
-valor2 = float(input('Digite um valor'))
-valor2
-#2.0
+
 #Criando um erro
 int('2+5')
 #Com a função eval nós podemos converter os dados numericos entre '' em int.
 eval('2+5')
 valor3 = (2+5)
-
+#raw_input()
+raw_input()
+valor4 = raw_input()
+valor4
+type(valor4)
 
 #Função format
 print('Eu gosto de {0} e {1}'.format('ecologia', 'aprender python'))
@@ -33,3 +45,14 @@ x
 print('O valor de x e %3.2f' %x)
 print('O valor de x e %3.4f' %x)
 print('O valor de x e %3.5f' %x)
+
+#Função len()
+string_grande = 'fd098f09d8f09d809f80d9'
+string_grande
+len(string_grande)
+#Criando uma função para executar o len()
+tamanho = len(string_grande)
+tamanho
+string_grande = 'fd098f09d8f09d809f80d9XXX'
+tamanho = len(string_grande)
+tamanho
