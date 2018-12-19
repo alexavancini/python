@@ -56,3 +56,7 @@ tamanho
 string_grande = 'fd098f09d8f09d809f80d9XXX'
 tamanho = len(string_grande)
 tamanho
+
+#%s e %d
+endereco = raw_input('Digite o nome da rua: ')
+print('O endereco da rua e: %s e este dado contem %d caracteres') %(endereco, len(endereco))
