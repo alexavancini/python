@@ -60,3 +60,9 @@ tamanho
 #%s e %d
 endereco = raw_input('Digite o nome da rua: ')
 print('O endereco da rua e: %s e este dado contem %d caracteres') %(endereco, len(endereco))
+
+#Encortando números quebrados
+print 'numero quebrado %.2f' % 1.5834752389
+
+quebrado = 2.9458039
+print 'numero quebrado %.2f' %quebrado
