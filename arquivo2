@@ -65,4 +65,4 @@ print('O endereco da rua e: %s e este dado contem %d caracteres') %(endereco, le
 print 'numero quebrado %.2f' % 1.5834752389
 
 quebrado = 2.9458039
-print 'numero quebrado %.2f' %quebrado
+print 'numero e: %.2f' %quebrado
