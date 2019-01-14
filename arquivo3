@@ -43,3 +43,17 @@ not false = True
 (1+1==3 or 2+2==4) and (10+10==50 or 20+20==40) --> True
 (1+1==3 or 2+2==5) and (10+10==50 or 20+20==40) --> False
 
+a = [1, 2, 3, 4]
+print (a)
+b = a
+print (b)
+c = b 
+print (c)
+d = c
+print (d)
+print (a, b, c, d)
+a == b (True)
+b == c (True)
+c == d (True)
+a != b (False)
+a != d (False)
