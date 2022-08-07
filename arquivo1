@@ -1,5 +1,25 @@
 #variaveis
 
+print ('Hellow world!')
+print ("Hellow World")
+
+print (2+2)
+
+print ('2+2')
+print ('2'+'2')
+
+2+2
+2-2
+2*2
+2/2
+
+'2'+'2'
+
+print ('olá' + 2)
+print ('olá' + '2')
+print ('olá' , 2)
+
+
 #valor inteiro (int)
 variavel1 = 10
 variavel2 = 20
@@ -9,31 +29,80 @@ variavel1
 variavel2
 variavel3
 
-#Operações matemáticas
+valor1 = 50
+valor2 = 100
+valor3 = 200
+
+valor1
+valor2
+valor3
+
+idade_joao = 18
+idade_pedro = 20
+idade_francisco = 30
+
+idade_joao
+idade_pedro
+idade_francisco
+
+print ('a idade do João é' , idade_joao)
+print ('a idade do Pedro é' , idade_pedro)
+print ('a idade do Francisco é' , idade_francisco)
+
+print ('a idade do João é' , idade_joao, 'e ele recebe', valor1, 'por hora')
+print ('a idade do Pedro é' , idade_pedro, 'e ele recebe', valor2, 'por hora')
+print ('a idade do Francisco é' , idade_francisco, 'e ele recebe', valor3, 'por hora')
+
+#Exercício: A idade do __________ é ______, ele recebe R$ ____ por hora e já trabalhou ____ horas este mês.
+
+#Sendo que
+          #João recebe valor1 e já trabalhou variavel1
+          #Pedro recebe valor2 e já trabalhou variavel2
+          #Francisco recebe valor3 e já trabalhou variavel3
+
+#Operações matemáticas com valor inteiro
 variavel1 + variavel2
+variavel1 - variavel2
+variavel1 * variavel2
+variavel1 / variavel2
+
 variavel1 + variavel2 + variavel3
 variavel1 + (variavel2*variavel3)
-variavel1 + (variavel2/variavel3)
+variavel1 + (variavel2/variavel3*variavel1)
 
-#valor palavra (str)
-variavel4 = palavra
-variavel5 = bio
-variavel6 = logia
+#Exercício: João e Pedro já trabalharam juntos _____ horas este mês.
+#Exercicio: Francisco trabalhou nesta semana ________ horas a mais que João.
+#Exercicio: João e Pedro juntos trabalharam ______ horas a mais que Francisco sozinho.
+#Exercicio: Francisco sozinho trabalhou apenas ____ horas a menos que João e Pedro juntos.
 
-#Mostrar na tela o valor de uma variável (print)
-print variavel1
-print variavel2
-print variavel3
 
-print variavel1, variavel4
-
-#Somar variáveis de valor inteiro
-variavel1 + variavel2 + variavel3
-variavel1 + (variavel2*variavel3)
-variavel1 + (variavel2/variavel3)
+#Declarando strings (str)
+variavel4 = 'palavra'
+variavel5 = 'bio'
+variavel6 = 'logia'
 
 #Concatenar variáveis de valor string
 variavel5 + variavel6 (bio + logia)
+
+#Exercício: O cargo do João nesta empresa é ____________.
+  #Sendo que:
+    #joão é Auxiliar administrativo.
+    
+#Exercício: O cargo do João nesta empresa é _____________, do Pedro _______________ e do Francisco _______________.
+  #Sendo que:
+    #joão é o funcionario 1 e é Auxiliar administrativo.
+    #Pedro é o funcionario 2 e é Gerente.
+    #Francisco é o funcionario 3 e é Diretor.
+    
+funcionario1 = 'Joao'
+funcionario2 = 'Pedro'
+funcionario3 = 'Francisco'
+
+cargo1 = 'auxiliar administrativo'
+cargo2 = 'gerente'
+cargo3 = 'diretor'
+
+#Exercício: A idade do __________ é ______, ele ocupa o cargo de ___________ ele recebe R$ ____ por hora e já trabalhou ____ horas este mês. 
 
 #Lista de palavras reservadas
 import keyword
@@ -46,6 +115,11 @@ type(2) is int
 type(2.2) is float
 (True or False)
 #float pode registrar o valor de até 15 casas decimais depois da vírgula
+
+#Exercicio: O salario do Mario é R$998,37.
+
+
+
 
 type(2+2j) is complex
 (True or False)
