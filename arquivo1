@@ -19,8 +19,61 @@ print ('olá' + 2)
 print ('olá' + '2')
 print ('olá' , 2)
 
+print('1,2,3,4,5,6,7,8,9,10)
 
+print('1,2,3,4,5,6,7,8,9,10, sep='/')
+print('1,2,3,4,5,6,7,8,9,10, sep='-')
+print('1,2,3,4,5,6,7,8,9,10, sep='==')
+print('1,2,3,4,5,6,7,8,9,10, sep='~')
+
+print('Ola','Mundo', sep='~')
+
+print('Ola, Mundo! ', end ='')
+print('Ciao, Mondo! ')
+print('Helow, World!')
+
+print('Ola, Mundo! ', end ='')
+print('Ciao, Mondo! ',  end ='')
+print('Helow, World!')
+
+print('Ola, Mundo! ', end ='&')
+print('Ciao, Mondo! ',  end ='&')
+print('Helow, World!')
+
+print('Ola, Mundo! ', end ='& ')
+print('Ciao, Mondo! ',  end ='& ')
+print('Helow, World! ', end = '\n')
+print('Halo, Welt! ', end = '& ')
+print('Bonjour, le monde! ')
+
+#Comentário
+
+#Em python é possível comentar o código utilizando o carctaer #
+
+print('Ola, Mundo!') #Linha 1, português
+print('Ciao, Mondo!') #Linha 2, italiano
+print('Helow, World!') #Linha3, Inglês
+print('Halo, Welt!') #Linha4, alemão
+print('Bonjour, le monde!') #Linha 5, francês
+
+
+'''
+É possível comentar várias
+linhas utilizando várias aspas
+consectuvas
+'''
+
+print('Ola, Mundo!') #Linha 1, português
+print('Ciao, Mondo!') #Linha 2, italiano
+print('Helow, World!') #Linha3, Inglês
+print('Halo, Welt!') #Linha4, alemão
+print('Bonjour, le monde!') #Linha 5, francês
+
+
+#variaveis
 #valor inteiro (int)
+
+
 variavel1 = 10
 variavel2 = 20
 variavel3 = 30
@@ -29,6 +82,12 @@ variavel1
 variavel2
 variavel3
 
+variavel1 + variavel2
+variavel 3 - variavel 1
+variavel1 + 2
+variavel2 * 4
+variavel3 / 6
+
 valor1 = 50
 valor2 = 100
 valor3 = 200
@@ -36,6 +95,29 @@ valor3 = 200
 valor1
 valor2
 valor3
+
+valor1 + variavel2
+variavel3 * valor2
+valor3 / variavel1
+
+#Uso de () nas operações
+#PEMDAS
+
+(variavel1 + valor2) / variavel3
+variavel1 + valor/ / variavel3
+
+
+#a linguagem Python é case sensitive, ou seja, ela
+#diferencia letras maiúsculas de minúsculas.
+
+c1 = Centro-1
+C1 = Correspondencia-1
+
+idade_rafael, idade_marcos, idade_lucas = 15,20,30
+print(idade_rafael, idade_marcos, idade_lucas)
+
+end_rafael, end_marcos, end_lucas = 'Rua dos ipes', 'Rua das margaridas', 'Rua das araucarias'
+print(end_rafael, end_marcos, end_lucas)
 
 idade_joao = 18
 idade_pedro = 20
@@ -60,11 +142,84 @@ print ('a idade do Francisco é' , idade_francisco, 'e ele recebe', valor3, 'por
           #Pedro recebe valor2 e já trabalhou variavel2
           #Francisco recebe valor3 e já trabalhou variavel3
 
-#Operações matemáticas com valor inteiro
+
+var1 = 10
+var2 = var1
+var3 = var2
+
+print(var1,var2,var3)
+
+var1 = 30
+var2 = var1
+var3 = var2
+var4 = var1 + 20
+var5 = var4 + 10
+
+print(var1,var2,var3, var4, var5)
+
+
+
+#Operadores aritiméticos
 variavel1 + variavel2
 variavel1 - variavel2
 variavel1 * variavel2
 variavel1 / variavel2
+
+5**3 #exponenciação
+10//9 #extração da parte inteira da divisão
+7%2 #módulo (retorna o resto da divisão)
+
+#Operadores relacionais
+
+2 > 2
+4 < 2
+2.1 < 2
+3 == 2
+2 == 2
+
+#Operadores relacionais compostos
+
+2 >= 2
+2.1 >= 2
+2 <= 2
+2.1 <= 2
+
+#Operadores lógicos
+
+True
+False
+
+#Conectivos
+
+x = 1
+print(x > 0) and (x > 100)
+False
+
+x = 1
+print(x > 0) and (x < 100)
+True
+
+x = 1
+print(x > 0) or (x > 100)
+True
+
+x = 1
+print(x > 0) and (x < 100)
+True
+
+#Atribuição
+
+a = 10
+print(a)
+
+a = b = 20
+print(a)
+print(b)
+
+
+
+
+
 
 variavel1 + variavel2 + variavel3
 variavel1 + (variavel2*variavel3)
@@ -118,16 +273,23 @@ type(2.2) is float
 
 #Exercicio: O salario do Mario é R$998,37.
 
+#type
+
+print(type(2))
+print(type(2.345))
+print(type('dois'))
+print(type(True))
+print(type(False))
+
+print(type(2) is int)
+print(type(2.345) is float)
+print(type('dois') is str)
+print(type(True) is bool)
+print(type(False) is bool)
 
 
 
 type(2+2j) is complex
-(True or False)
-
-type('teste') is str
-(True or False)
-
-type([2, 4, 6, 8, 10, 12]) is list
 (True or False)
 
 type({}) is dict
@@ -154,8 +316,19 @@ print(a, "é um numero inteiro?", isinstance(a,complex))
 print(a, "é um numero inteiro?", isinstance(10,int))
 print(b, "é um uma string?", isinstance(biologia,int))
 
-#Lista
-lista1 = 2, 4, 6, 8, 10
+#Lista e tupple
+
+lista1 = 2,4,6,8,10
+print(type(lista1))
+print(type(lista1)) is list
+
+lista2 = [20,40,60,80,100]
+print(type(lista2))
+print(type(lista2)) is list
+
+#tupple, dados imutaveis
+#lista, dados modificáveis
+
 #Equivalente a lista com parenteses (), lista tupple.
 print lista1
 print lista1[0]
@@ -173,9 +346,19 @@ lista1[2]=20
 #Se não colocar parenteses no ato da criação da variável, equivale ao parenteses.
 
 #Criando uma lista não tupple []
+
 lista1 = [2,4,6,8,10]
 lista1[2]=20
 lista1
+
+
+lista1 = 2,4,6,8,10
+lista2 = [20,40,60,80,100]
+#lista1[1]=400
+lista2[1]=3
+print(lista1[1])
+print(lista2[1])
+
 
 #String
 palavra = 'biologia'
@@ -205,24 +388,36 @@ lista3=[2]
 
 #Tratando os valores como convertidos entre os tipos de dados
 #Converter um valor de variavel int para str é possível
-#Mas converter um valor de variavel str em int não.
-variavel1
-varialve2
-variavel3
-variavel4
-variavel5
-str(variavel1)
-int(variavel4)
-str(variavel2)
-int(variavel5)
-#Converter uma variável int em float é possível
-float(variavel1)
-#Converter uma variável float em int é possível também
-int(2.5)
-#Converter uma variável flot em str é possível
-variavel7 = 2.5
-type(variavel7)
-str(variavel7)
+
+#Convertendo um valor float em int
+nota1 = int(9.8)
+print(nota1, type(nota1))
+
+#um valor float não informado ficando float
+nota2 = 9.8
+print(nota2, type(nota2))
+
+#Convertendo um valor int em float
+nota3 = float(7)
+print(nota3, type(nota3))
+
+#Convertendo um valor int em str
+nota4 = str(6)
+print(nota4, type(nota4))
+
+#Convertendo um valor float em str
+nota5 = str(7.7)
+print(nota5, type(nota5))
+
+#Convertendo str em int
+nota6 = int('5')
+print(nota6, type(nota6))
+
+#Convertendo str em float
+nota7 = float('5')
+print(nota7, type(nota7))
+
+
 
 #Faltou acrescentar o dictionary (dict)
 
