@@ -1,4 +1,4 @@
-#variaveis
+#print
 
 print ('Hellow world!')
 print ("Hellow World")
@@ -73,7 +73,6 @@ print('Bonjour, le monde!') #Linha 5, francês
 #variaveis
 #valor inteiro (int)
 
-
 variavel1 = 10
 variavel2 = 20
 variavel3 = 30
@@ -113,12 +112,14 @@ variavel1 + valor/ / variavel3
 c1 = Centro-1
 C1 = Correspondencia-1
 
+#Atribuindo valores a várias variáveis
 idade_rafael, idade_marcos, idade_lucas = 15,20,30
 print(idade_rafael, idade_marcos, idade_lucas)
 
 end_rafael, end_marcos, end_lucas = 'Rua dos ipes', 'Rua das margaridas', 'Rua das araucarias'
 print(end_rafael, end_marcos, end_lucas)
 
+#Print com texto e valor de variáveis junto
 idade_joao = 18
 idade_pedro = 20
 idade_francisco = 30
@@ -157,7 +158,10 @@ var5 = var4 + 10
 
 print(var1,var2,var3, var4, var5)
 
+#Em python não é possível nomear variáveis com nomes que iniciam com número
 
+cod1 = 7654321
+1cod = 7654321 #erro
 
 #Operadores aritiméticos
 variavel1 + variavel2
@@ -263,7 +267,77 @@ cargo3 = 'diretor'
 import keyword
 print(keyword.kwlist)
 
-#Type para testar o tipo da variável
+#manipulação de strings
+
+teste = ('python')
+print(len(teste))
+print(teste.capitalize())
+
+teste2 = ('paralelepipido')
+print(teste2.count('a')) #count()
+print(teste2.count('e')) #count()
+print(teste2.count('i')) #count()
+print(teste2.count('o')) #count()
+print(teste2.count('u')) #count()
+
+print(teste2.startswith('para')) #startswith
+print(teste2.startswith('ara')) #startswith
+
+print(teste2.endswith('pido')) #endswith
+print(teste2.endswith('pida')) #endswith
+
+teste3 = ('!@#$%a')
+teste4 = ('2aa2213')
+teste5 = ('abcde')
+teste6 = ('Abcde')
+teste7 = ('ABCDE')
+
+
+print(teste3.isalnum())
+print(teste4.isalnum())
+print(teste5.isalpha())
+print(teste6.islower())
+print(teste7.islower())
+print(teste7.isupper())
+print(teste.lower())
+print(teste5.upper())
+print(teste6.swapcase())
+
+teste8 = ('estudo de python')
+
+print(teste8.title())
+print(teste8.split())
+print(teste8.replace('python','programação'))
+
+print(teste2.find('e'))
+print(teste2.find('a'))
+print(teste2.find('p'))
+
+print(len(teste2))
+print(teste2.ljust(18))
+print(teste2.rjust(18))
+print(teste2.center(18))
+
+teste9 = ('   -python-esquerda')
+teste10 = ('python-direita   ')
+teste11 = ('   python-esq-dir   ')
+
+print(teste9)
+print(teste10)
+
+print(teste9.lstrip())
+print(teste10.rstrip())
+
+print(teste11)
+print(teste11.strip())
+
+
+
+
+
+
+#Type
+#Testar e verificar o tipo da variável
 type(2) is int
 (True or False)
 
