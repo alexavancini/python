@@ -332,8 +332,26 @@ print(teste11)
 print(teste11.strip())
 
 
+#Fatiamento de string
 
+var1 = ('python')
+print (var1[1:4])
+print (var1[0:3])
+print (var1[3:8])
 
+Exercício: Crie uma senha automática para o usuário com os seguintes critérios
+          -3primeiras letras do primeiro nome
+          -3primeiras letras do segundo nome
+          -ano de nascimento
+
+first_name = ('Alex')
+last_name = ('Avancini')
+area = ('Financeiro')
+
+fname = (first_name[0:3])
+lname = (last_name[0:3])
+
+print(fname+lname+area)
 
 
 #Type
