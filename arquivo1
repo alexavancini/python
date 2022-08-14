@@ -28,6 +28,20 @@ print('1,2,3,4,5,6,7,8,9,10, sep='~')
 
 print('Ola','Mundo', sep='~')
 
+#.join, lista intellisense
+
+lista14 = ['1', '2', '3', '4']
+
+s = "-"
+s = s.join(lista14)
+print(s)
+
+lista15 = ['g','e','e','k', 's']
+print("".join(lista15))
+print("-".join(lista15))
+print("#".join(lista15))
+print("~".join(lista15))
+
 print('Ola, Mundo! ', end ='')
 print('Ciao, Mondo! ')
 print('Helow, World!')
@@ -341,6 +355,7 @@ teste8 = ('estudo de python')
 
 print(teste8.title())
 print(teste8.split())
+print(teste8.split('t'))
 print(teste8.replace('python','programação'))
 
 print(teste2.find('e'))
@@ -472,6 +487,13 @@ print (lista1[:3]) #apresenta a lista apenas até o valor 3, contando como inici
 #Procurando um valor dentro de uma variável
 #find
 
+#index, procurando o valor de indexação dentro da lista
+
+animais = ["girafa", "cobra", "macaco", "formiga", "anta"]
+print(animais.index("formiga"))
+print(animais.index("cobra"))
+print(animais.index("anta"))
+
 frase1 = ('Python é uma linguagem de programação')
 print(frase1.find('ã'))
 print(frase1.find('a')) #o primeiro valor informado encontrado
@@ -492,6 +514,10 @@ frase1 = ('Python é uma linguagem de programação')
 print(frase1[::1])
 print(frase1[::2])
 print(frase1[::3])
+
+#invertendo o valor da variável (de trás para frente)
+print(frase1[::-1])
+
 
 #Alterando uma lista
 lista1[2]=20
