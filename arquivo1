@@ -169,6 +169,9 @@ variavel1 - variavel2
 variavel1 * variavel2
 variavel1 / variavel2
 
+variavel1 + variavel2 + variavel3
+variavel1 + (variavel2*variavel3)
+variavel1 + (variavel2/variavel3*variavel1)
 5**3 #exponenciação
 10//9 #extração da parte inteira da divisão
 7%2 #módulo (retorna o resto da divisão)
@@ -223,14 +226,26 @@ print(b)
 
 
 #associação
+#in
+#not in
+
+print(19 in [16,17,18,19,20,21], '(está com in sem lista)')
+print(19 not in [16,17,18,19,20,21], '(não está com not in sem lista)')
+
+minhalista = [16,17,18,19,20,21]
+print(19 in minhalista, '(com in, com lista)')
+print(22 in minhalista, '(não está, com in, sem lista)')
+print(19 not in minhalista, '(Falso pois ele está com not in, com lista)')
+
+
+print('v' in 'Avancini', '(v no texto sem variável)')
+
+meusobrenome = ('Avancini')
+print('v' in meusobrenome, '(v no texto dentro da variável)')
 
 
 
 
-
-variavel1 + variavel2 + variavel3
-variavel1 + (variavel2*variavel3)
-variavel1 + (variavel2/variavel3*variavel1)
 
 #Exercício: João e Pedro já trabalharam juntos _____ horas este mês.
 #Exercicio: Francisco trabalhou nesta semana ________ horas a mais que João.
@@ -267,8 +282,24 @@ cargo3 = 'diretor'
 #Exercício: A idade do __________ é ______, ele ocupa o cargo de ___________ ele recebe R$ ____ por hora e já trabalhou ____ horas este mês. 
 
 #Lista de palavras reservadas
+#palavras proibidas
+
 import keyword
 print(keyword.kwlist)
+
+#caracteres proibidos
+"",<>/|\()@#$%^*+-!
+
+#não pode haver variáveis que começam com números
+
+2 = ('python')
+
+#não pode haver variáveis com espaços entre nomes
+
+estudo python = 2
+
+
+
 
 #manipulação de strings
 
@@ -516,6 +547,50 @@ print(nota6, type(nota6))
 #Convertendo str em float
 nota7 = float('5')
 print(nota7, type(nota7))
+
+#Convertendo um valor em hexadecimal
+print(hex(80))
+print(hex(2))
+print(hex(81))
+print(hex(100))
+print(hex(1000))
+print(hex(10000))
+print(hex(1000000000))
+#impossivel converter string
+
+#Convertendo um valor em binario
+print(bin(80))
+print(bin(2))
+print(bin(81))
+print(bin(100))
+print(bin(1000))
+print(bin(10000))
+print(bin(1000000000))
+#impossivel converter string
+
+#Converter um número negativo e retornar o mesmo valor positivo
+
+print(abs(-8))
+print(abs(-200))
+print(abs(-2))
+print(abs(8))
+
+#retorna um valor na potencia desejada
+
+print(pow(2,2))
+print(pow(5,5))
+print(pow(3,3))
+
+#Arredondar um valor float
+
+print(round(3.14159265359)) #pi
+print(round(3.14159265359,2))
+print(round(3.14159265359,3))
+print(round(3.14159265359,4))
+
+
+
+
 
 
 
