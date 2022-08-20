@@ -317,10 +317,21 @@ estudo python = 2
 
 #manipulação de strings
 
+#len
 teste = ('python')
 print(len(teste))
 print(teste.capitalize())
 
+string_grande = 'fd098f09d8f09d809f80d9'
+string_grande
+
+len(string_grande)
+
+#Criando uma função para executar o len()
+tamanho = len(string_grande)
+tamanho
+
+#count
 teste2 = ('paralelepipido')
 print(teste2.count('a')) #count()
 print(teste2.count('e')) #count()
@@ -343,7 +354,7 @@ teste7 = ('ABCDE')
 
 print(teste3.isalnum())
 print(teste4.isalnum())
-print(teste5.isalpha())
+print(teste5.isalpha()) #Retorna False se a string contiver algum caracter que não seja letras
 print(teste6.islower())
 print(teste7.islower())
 print(teste7.isupper())
@@ -378,7 +389,7 @@ print(teste9.lstrip())
 print(teste10.rstrip())
 
 print(teste11)
-print(teste11.strip())
+print(teste11.strip()) #Retira espaços em branco no começo e no fim
 
 
 #Fatiamento de string
@@ -492,6 +503,7 @@ print (lista1[:3]) #apresenta a lista apenas até o valor 3, contando como inici
 animais = ["girafa", "cobra", "macaco", "formiga", "anta"]
 print(animais.index("formiga"))
 print(animais.index("cobra"))
+
 print(animais.index("anta"))
 
 frase1 = ('Python é uma linguagem de programação')
