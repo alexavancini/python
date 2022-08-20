@@ -46,16 +46,7 @@ print('O valor de x e %3.2f' %x)
 print('O valor de x e %3.4f' %x)
 print('O valor de x e %3.5f' %x)
 
-#Função len()
-string_grande = 'fd098f09d8f09d809f80d9'
-string_grande
-len(string_grande)
-#Criando uma função para executar o len()
-tamanho = len(string_grande)
-tamanho
-string_grande = 'fd098f09d8f09d809f80d9XXX'
-tamanho = len(string_grande)
-tamanho
+
 
 #%s e %d
 endereco = raw_input('Digite o nome da rua: ')
@@ -66,3 +57,52 @@ print 'numero quebrado %.2f' % 1.5834752389
 
 quebrado = 2.9458039
 print 'numero e: %.2f' %quebrado
+
+
+#insert
+
+lista1 = [1,2,3,4,5,6,7,8,9]
+
+lista1.insert(10,70)
+
+#remove
+#remove por meio do dado
+
+lista1.remove(4)
+print(lista1)
+
+lista2 = ['geogragia','português','matemáica','história','biologia']
+lista2.pop(3)
+print(lista2)
+
+
+#sort
+#não retorna a lista
+lista2 = ['geogragia','português','matemáica','história','biologia']
+lista2.sort() # por isso é necessário aplicar primeiro e depois imprimir
+print(lista2)
+#print(lista.sort()) não funciona
+
+#sorted
+#imprime a lista
+lista2 = ['geogragia','português','matemáica','história','biologia']
+print(sorted(lista2))
+
+
+#Range
+#parametros: INICIO | PARADA | INTERVALO
+
+lista6 = list(range(0,10))
+print(lista6)
+
+lista6 = list(range(1,8))
+print(lista6)
+
+lista6 = list(range(0,21,2))
+print(lista6)
+
+#range com #in
+
+x = range(6)
+for n in x:
+  print(n)
