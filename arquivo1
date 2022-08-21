@@ -453,32 +453,48 @@ print(teste2.find('a'))
 print(teste2.find('p'))
 
 print(len(teste2))
-print(teste2.ljust(18))
-print(teste2.rjust(18))
-print(teste2.center(18))
+print(teste2.ljust(18)) #ajusta adicionando caracteres no teste2 L = left
+print(teste2.rjust(18)) #ajusta adicionando caracteres no teste2 R = Right
+print(teste2.center(18)) #ajusta adicionando caracteres no teste2 C = Center
 
+#-------------------------------------------------------------------------------------------#
+#strip
+#-------------------------------------------------------------------------------------------#
 teste9 = ('   -python-esquerda')
 teste10 = ('python-direita   ')
 teste11 = ('   python-esq-dir   ')
 
 print(teste9)
 print(teste10)
-
-print(teste9.lstrip())
-print(teste10.rstrip())
-
 print(teste11)
+
 print(teste11.strip()) #Retira espaços em branco no começo e no fim
 
+#----------------#
+#lstrip
+#----------------#
 
+print(teste9.lstrip()) #Retira espaços em branco da esquerda
+
+#----------------#
+#rstrip
+#----------------#
+print(teste10.rstrip()) #Retira espaços em branco da direita
+
+#===========================================================================================#
 #Fatiamento de string
+#===========================================================================================#
 
 var1 = ('python')
 print (var1[1:4])
 print (var1[0:3])
 print (var1[3:8])
 
-Exercício: Crie uma senha automática para o usuário com os seguintes critérios
+#-------------------------------------------------------------------------------------------#
+Desafio
+#-------------------------------------------------------------------------------------------#
+
+Crie uma senha automática para o usuário com os seguintes critérios
           -3primeiras letras do primeiro nome
           -3primeiras letras do segundo nome
           -ano de nascimento
@@ -487,44 +503,23 @@ first_name = ('Alex')
 last_name = ('Avancini')
 area = ('Financeiro')
 
-fname = (first_name[0:3])
-lname = (last_name[0:3])
+#-------------------------------------------------------------------------------------------#
 
-print(fname+lname+area)
-
-
+#===========================================================================================#
 #Type
+#===========================================================================================#
+
 #Testar e verificar o tipo da variável
-type(2) is int
-(True or False)
-
-type(2.2) is float
-(True or False)
-#float pode registrar o valor de até 15 casas decimais depois da vírgula
-
-#Exercicio: O salario do Mario é R$998,37.
-
-#type
-
-print(type(2))
-print(type(2.345))
-print(type('dois'))
-print(type(True))
-print(type(False))
 
 print(type(2) is int)
-print(type(2.345) is float)
-print(type('dois') is str)
+print(type(2.2) is float) #float pode registrar o valor de até 15 casas decimais depois da vírgula
+print(type('python') is str)
+print(type([1,2,3,4,5,6,7,8,9,10]) is list)
+print(type((1,2,3,4,5,6,7,8,9,10)) is tuple)
+print(type({"biologia": 1, "português":2, "matemática":3}) is dict)
 print(type(True) is bool)
 print(type(False) is bool)
-
-
-
-type(2+2j) is complex
-(True or False)
-
-type({}) is dict
-(True or False)
+print(type(2+2j) is complex)
 
 a = 10
 type(a)
@@ -535,11 +530,13 @@ type(b)
 c = 2.2
 type(c)
 
-print(a, "o type de a e", type(a))
-print(b, "o type de b e", type(b))
-print(c, "o type de c e", type(c))
+print(a, "o type de a é", type(a))
+print(b, "o type de b é", type(b))
+print(c, "o type de c é", type(c))
 
+#===========================================================================================#
 #isistance
+#===========================================================================================#
 print(a, "é um numero inteiro?", isinstance(a,int))
 print(a, "é um numero inteiro?", isinstance(a,str))
 print(a, "é um numero inteiro?", isinstance(a,complex))
@@ -547,21 +544,37 @@ print(a, "é um numero inteiro?", isinstance(a,complex))
 print(a, "é um numero inteiro?", isinstance(10,int))
 print(b, "é um uma string?", isinstance(biologia,int))
 
-#Lista e tupple
+#===========================================================================================#
+LISTA
+#===========================================================================================#
 
-lista1 = 2,4,6,8,10
+#-------------------------------------------------------------------------------------------#
+#Lista tupple ()
+#-------------------------------------------------------------------------------------------#
+
+#tupple, dados imutaveis
+lista1 = (2,4,6,8,10)
 print(type(lista1))
-print(type(lista1)) is list
+print(type(lista1) is list)
+print(type(lista1) is tuple)
+
+#-------------------------------------------------------------------------------------------#
+#Lista NÃO tupple
+#-------------------------------------------------------------------------------------------#
+
+#não tupple, dados mutaveis
 
 lista2 = [20,40,60,80,100]
 print(type(lista2))
-print(type(lista2)) is list
+print(type(lista2) is list)
+print(type(lista2) is tuple)
 
-#Lista
-#tupple, dados imutaveis
-#lista, dados modificáveis
 
-#Equivalente a lista com parenteses (), lista tupple.
+#-------------------------------------------------------------------------------------------#
+Slice nas listas
+#-------------------------------------------------------------------------------------------#
+#em python a indexação começa no 0,no R começa no 1
+
 print (lista1)
 print (lista1[0])
 print (lista1[1])
@@ -569,21 +582,26 @@ print (lista1[2])
 print (lista1[3])
 print (lista1[4])
 print (lista1[0:3]
-print (lista1[2:]) #apresenta a lista apartir do 1º valor
-#em python a indexação começa no 0,no R começa no 1
-print 
+print (lista1[2:]) #a partir do 2
+print (lista1[3:]) #a partir do 3
 print (lista1[:3]) #apresenta a lista apenas até o valor 3, contando como inicio o 0.
 
-#Procurando um valor dentro de uma variável
+#===========================================================================================#
+#Slice negativo
+#===========================================================================================#
+
+frase1 = ('Python é uma linguagem de programação')
+
+print(len(frase1))
+print(frase1[-37])
+print(frase1[-1])
+print(frase1[-11:])
+print(frase1[-11:-3])
+
+
+#===========================================================================================#
 #find
-
-#index, procurando o valor de indexação dentro da lista
-
-animais = ["girafa", "cobra", "macaco", "formiga", "anta"]
-print(animais.index("formiga"))
-print(animais.index("cobra"))
-
-print(animais.index("anta"))
+#===========================================================================================#
 
 frase1 = ('Python é uma linguagem de programação')
 print(frase1.find('ã'))
@@ -593,27 +611,41 @@ print(frase1.find('a')) #o primeiro valor informado encontrado
 print(frase1[:23])
 print(frase1[23:])
 
-#Slice negativo
-print(len(frase1))
-print(frase1[-37])
-print(frase1[-1])
-print(frase1[-11:])
-print(frase1[-11:-3])
+#===========================================================================================#
+#index
+#===========================================================================================#
 
+#index, procurando o valor de indexação dentro da lista
+
+animais = ["girafa", "cobra", "macaco", "formiga", "anta"]
+print(animais)
+print(animais.index("formiga"))
+print(animais.index("cobra"))
+print(animais.index("anta"))
+
+#===========================================================================================#
 #Saltando valores
+#===========================================================================================#
+
 frase1 = ('Python é uma linguagem de programação')
 print(frase1[::1])
 print(frase1[::2])
 print(frase1[::3])
 
+#===========================================================================================#
 #invertendo o valor da variável (de trás para frente)
+#===========================================================================================#
+
+frase1 = ('Python é uma linguagem de programação')
 print(frase1[::-1])
 
-
+#===========================================================================================#
 #Alterando uma lista
+#===========================================================================================#
+
 lista1[2]=20
 
-#Lista tupple é uma lista fixa no modificada, definida nomomento da criação da variavel em lista, seu sinal é os ();
+#Lista tupple é uma lista fixa não modificada, definida nomomento da criação da variavel em lista, seu sinal é os ();
 #Se não colocar parenteses no ato da criação da variável, equivale ao parenteses.
 
 #Criando uma lista não tupple []
@@ -625,52 +657,79 @@ lista1
 
 lista1 = 2,4,6,8,10
 lista2 = [20,40,60,80,100]
-#lista1[1]=400
+
+lista1[1]=400
 lista2[1]=3
+
 print(lista1[1])
 print(lista2[1])
 
-#Inserindo valors na lista
+#===========================================================================================#
 #insert
-lista1 = [1,2,3,4,5,6,7,8,9]
+#===========================================================================================#
 
+#Inserindo valors na lista
+
+lista1 = [1,2,3,4,5,6,7,8,9]
 lista1.insert(10,70)
 
+#===========================================================================================#
+#remove
+#===========================================================================================#
 
 #removendo valores na lista
-#remove
 #remove por meio do dado
 
 lista1.remove(4)
 print(lista1)
 
+#===========================================================================================#
+#pop
+#===========================================================================================#
+
 #remover por meio do número de indexação (pop)
+
 lista2 = ['geogragia','português','matemáica','história','biologia']
 lista2.pop(3)
 print(lista2)
 
+#===========================================================================================#
+#sort
+#===========================================================================================#
 
 #Organizando a lista
-#sort
 #não retorna a lista
+
 lista2 = ['geogragia','português','matemáica','história','biologia']
 lista2.sort() # por isso é necessário aplicar primeiro e depois imprimir
 print(lista2)
 #print(lista.sort()) não funciona
 
+#===========================================================================================#
 #sorted
+#===========================================================================================#
 #imprime a lista
+
 lista2 = ['geogragia','português','matemáica','história','biologia']
 print(sorted(lista2))
 
-
-#máximo e mínimo
-
+#===========================================================================================#
+#max
+#===========================================================================================#
+lista2 = ['geogragia','português','matemática','história','biologia']
 print(lista2)
-print('máximo',max(lista2))
-print('mínimo',min(lista2))
+print('máximo', max(lista2))
 
+#===========================================================================================#
+#min
+#===========================================================================================#
+lista2 = ['geogragia','português','matemática','história','biologia']
+print('mínimo', min(lista2))
+
+#===========================================================================================#
 #String
+#===========================================================================================#
+
 palavra = 'biologia'
 palavra
 palavra[2]
@@ -680,7 +739,10 @@ palavra [3:6]
 #String são inalterados em python
 palavra [1]='y'
 
+#===========================================================================================#
 #set {}
+#===========================================================================================#
+
 #set é uma lista declarada de variáveis que passam a ser mostradas em ordem desordenada. 
 #A ordem da desordenação da lista varia de acordo com cada vez que é declarada
 
@@ -690,44 +752,66 @@ lista2 = {10, 8 , 6, 4, 2}
 lista2
 lista2 = {8, 6, 4, 10, 2}
 lista2
+
 #A função SET não aceita repetições, retirando na hora da impreção os números repetidos
 lista3 = {2, 2, 2, 4 , 4, 6, 8, 10}
 lista3
+
 #A função SET também não aceita filtrar os dados da lista com a função =[]
 lista3=[2]
 
 #Tratando os valores como convertidos entre os tipos de dados
 #Converter um valor de variavel int para str é possível
 
+#===========================================================================================#
+CONVERSÃO
+#===========================================================================================#
+
+#-------------------------------------------------------------------------------------------#
 #Convertendo um valor float em int
 nota1 = int(9.8)
 print(nota1, type(nota1))
+#-------------------------------------------------------------------------------------------#
 
+#-------------------------------------------------------------------------------------------#
 #um valor float não informado ficando float
 nota2 = 9.8
 print(nota2, type(nota2))
+#-------------------------------------------------------------------------------------------#
 
+#-------------------------------------------------------------------------------------------#
 #Convertendo um valor int em float
 nota3 = float(7)
 print(nota3, type(nota3))
+#-------------------------------------------------------------------------------------------#
 
+#-------------------------------------------------------------------------------------------#
 #Convertendo um valor int em str
 nota4 = str(6)
 print(nota4, type(nota4))
+#-------------------------------------------------------------------------------------------#
 
+#-------------------------------------------------------------------------------------------#
 #Convertendo um valor float em str
 nota5 = str(7.7)
 print(nota5, type(nota5))
+#-------------------------------------------------------------------------------------------#
 
+#-------------------------------------------------------------------------------------------#
 #Convertendo str em int
 nota6 = int('5')
 print(nota6, type(nota6))
+#-------------------------------------------------------------------------------------------#
 
+#-------------------------------------------------------------------------------------------#
 #Convertendo str em float
 nota7 = float('5')
 print(nota7, type(nota7))
+#-------------------------------------------------------------------------------------------#
 
+#-------------------------------------------------------------------------------------------#
 #Convertendo um valor em hexadecimal
+#-------------------------------------------------------------------------------------------#
 print(hex(80))
 print(hex(2))
 print(hex(81))
@@ -735,9 +819,12 @@ print(hex(100))
 print(hex(1000))
 print(hex(10000))
 print(hex(1000000000))
-#impossivel converter string
+#impossivel converter float ou string para hexadecimal, apenas inteiro.
 
-#Convertendo um valor em binario
+#-------------------------------------------------------------------------------------------#
+#Convertendo um valor em binario - o / 1
+#-------------------------------------------------------------------------------------------#
+
 print(bin(80))
 print(bin(2))
 print(bin(81))
@@ -745,32 +832,41 @@ print(bin(100))
 print(bin(1000))
 print(bin(10000))
 print(bin(1000000000))
-#impossivel converter string
+#impossivel converter string ou float
 
+#-------------------------------------------------------------------------------------------#
+
+
+#-------------------------------------------------------------------------------------------#
 #Converter um número negativo e retornar o mesmo valor positivo
+#-------------------------------------------------------------------------------------------#
 
 print(abs(-8))
 print(abs(-200))
 print(abs(-2))
 print(abs(8))
 
+#-------------------------------------------------------------------------------------------#
+#pow
+#-------------------------------------------------------------------------------------------#
+
+#Potenciação - ^
 #retorna um valor na potencia desejada
 
 print(pow(2,2))
 print(pow(5,5))
 print(pow(3,3))
 
-#Arredondar um valor float
+#-------------------------------------------------------------------------------------------#
+#round
+#-------------------------------------------------------------------------------------------#
 
+#Arredondar um valor float
 print(round(3.14159265359)) #pi
 print(round(3.14159265359,2))
 print(round(3.14159265359,3))
 print(round(3.14159265359,4))
-
-
-
-
-
+#-------------------------------------------------------------------------------------------#
 
 
 #Faltou acrescentar o dictionary (dict)
