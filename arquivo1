@@ -190,8 +190,20 @@ variavel1 + (variavel2/variavel3*variavel1)
 10//9 #extração da parte inteira da divisão
 7%2 #módulo (retorna o resto da divisão)
 
-#Operadores relacionais
 
+#===========================================================================================#
+#Sistema de comparações no python
+#===========================================================================================#
+== (igual a)
+!= (diferente de)
+> (maior)
+< (menor)
+>= (maior ou igual)
+<= (menor ou igual)
+#Tomar cuidado com expressões do tipo a = 4 ou 10 = 100, neste caso está se declarando uma variável com o operador =
+#-------------------------------------------------------------------------------------------#
+#Operadores relacionais
+#-------------------------------------------------------------------------------------------#
 2 > 2
 4 < 2
 2.1 < 2
@@ -199,19 +211,25 @@ variavel1 + (variavel2/variavel3*variavel1)
 2 == 2 #igual
 2 != 4 #diferente
 
+#-------------------------------------------------------------------------------------------#
 #Operadores relacionais compostos
+#-------------------------------------------------------------------------------------------#
 
 2 >= 2
 2.1 >= 2
 2 <= 2
 2.1 <= 2
 
+#===========================================================================================#
 #Operadores lógicos
+#===========================================================================================#
 
 True
 False
 
-#Conectivos
+#===========================================================================================#
+#Conectivos - and
+#===========================================================================================#
 
 x = 1
 print(x > 0) and (x > 100)
@@ -229,7 +247,9 @@ x = 1
 print(x > 0) and (x < 100)
 True
 
-#Atribuição
+#===========================================================================================#
+#Atribuição - =
+#===========================================================================================#
 
 a = 10
 print(a)
@@ -238,10 +258,9 @@ a = b = 20
 print(a)
 print(b)
 
-
-#associação
-#in
-#not in
+#===========================================================================================#
+#associação - in, not in
+#===========================================================================================#
 
 print(19 in [16,17,18,19,20,21], '(está com in sem lista)')
 print(19 not in [16,17,18,19,20,21], '(não está com not in sem lista)')
@@ -251,7 +270,6 @@ print(19 in minhalista, '(com in, com lista)')
 print(22 in minhalista, '(não está, com in, sem lista)')
 print(19 not in minhalista, '(Falso pois ele está com not in, com lista)')
 
-
 print('v' in 'Avancini', '(v no texto sem variável)')
 
 meusobrenome = ('Avancini')
@@ -260,26 +278,25 @@ print('v' in meusobrenome, '(v no texto dentro da variável)')
 
 
 
+#-------------------------------------------------------------------------------------------#
+Desafio 1
+#-------------------------------------------------------------------------------------------#
+João e Pedro já trabalharam juntos _____ horas este mês.
+Francisco trabalhou nesta semana ________ horas a mais que João.
+João e Pedro juntos trabalharam ______ horas a mais que Francisco sozinho.
+Francisco sozinho trabalhou apenas ____ horas a menos que João e Pedro juntos.
 
-#Exercício: João e Pedro já trabalharam juntos _____ horas este mês.
-#Exercicio: Francisco trabalhou nesta semana ________ horas a mais que João.
-#Exercicio: João e Pedro juntos trabalharam ______ horas a mais que Francisco sozinho.
-#Exercicio: Francisco sozinho trabalhou apenas ____ horas a menos que João e Pedro juntos.
-
-
-#Declarando strings (str)
-variavel4 = 'palavra'
-variavel5 = 'bio'
-variavel6 = 'logia'
-
-#Concatenar variáveis de valor string
-variavel5 + variavel6 (bio + logia)
-
-#Exercício: O cargo do João nesta empresa é ____________.
+#-------------------------------------------------------------------------------------------#
+Desafio 2
+#-------------------------------------------------------------------------------------------#
+O cargo do João nesta empresa é ____________.
   #Sendo que:
     #joão é Auxiliar administrativo.
-    
-#Exercício: O cargo do João nesta empresa é _____________, do Pedro _______________ e do Francisco _______________.
+
+#-------------------------------------------------------------------------------------------#
+Desafio 3
+#-------------------------------------------------------------------------------------------#
+O cargo do João nesta empresa é _____________, do Pedro _______________ e do Francisco _______________.
   #Sendo que:
     #joão é o funcionario 1 e é Auxiliar administrativo.
     #Pedro é o funcionario 2 e é Gerente.
@@ -293,10 +310,34 @@ cargo1 = 'auxiliar administrativo'
 cargo2 = 'gerente'
 cargo3 = 'diretor'
 
+#-------------------------------------------------------------------------------------------#
+Desafio 4
+#-------------------------------------------------------------------------------------------#
+
 #Exercício: A idade do __________ é ______, ele ocupa o cargo de ___________ ele recebe R$ ____ por hora e já trabalhou ____ horas este mês. 
 
-#Lista de palavras reservadas
+#===========================================================================================#
+String - str
+#===========================================================================================#
+
+variavel4 = 'palavra'
+variavel5 = 'bio'
+variavel6 = 'logia'
+
+print(type(variavel4))
+print(type(variavel5))
+print(type(variavel6))
+
+#-------------------------------------------------------------------------------------------#
+#Concatenar variáveis de valor string
+#-------------------------------------------------------------------------------------------#
+
+variavel5 + variavel6 (bio + logia)
+
+#===========================================================================================#
+#Lista de palavras reservadas e que não pode ser utilizadas como variável
 #palavras proibidas
+#===========================================================================================#
 
 import keyword
 print(keyword.kwlist)
@@ -312,12 +353,14 @@ print(keyword.kwlist)
 
 estudo python = 2
 
-
-
-
+#===========================================================================================#
 #manipulação de strings
+#===========================================================================================#
 
+#-------------------------------------------------------------------------------------------#
 #len
+#-------------------------------------------------------------------------------------------#
+
 teste = ('python')
 print(len(teste))
 print(teste.capitalize())
@@ -331,26 +374,42 @@ len(string_grande)
 tamanho = len(string_grande)
 tamanho
 
+#-------------------------------------------------------------------------------------------#
 #count
+#-------------------------------------------------------------------------------------------#
+
 teste2 = ('paralelepipido')
-print(teste2.count('a')) #count()
-print(teste2.count('e')) #count()
-print(teste2.count('i')) #count()
-print(teste2.count('o')) #count()
-print(teste2.count('u')) #count()
+print(teste2.count('a')) 
+print(teste2.count('e')) 
+print(teste2.count('i')) 
+print(teste2.count('o'))
+print(teste2.count('u'))
 
-print(teste2.startswith('para')) #startswith
-print(teste2.startswith('ara')) #startswith
+#-------------------------------------------------------------------------------------------#
+startswith
+#-------------------------------------------------------------------------------------------#
 
+teste2 = ('paralelepipido')
+print(teste2.startswith('para'))
+print(teste2.startswith('ara'))
+
+#-------------------------------------------------------------------------------------------#
+#endwith
+#-------------------------------------------------------------------------------------------#
+
+teste2 = ('paralelepipido')
 print(teste2.endswith('pido')) #endswith
 print(teste2.endswith('pida')) #endswith
+
+#-------------------------------------------------------------------------------------------#
+#isalnum
+#-------------------------------------------------------------------------------------------#
 
 teste3 = ('!@#$%a')
 teste4 = ('2aa2213')
 teste5 = ('abcde')
 teste6 = ('Abcde')
 teste7 = ('ABCDE')
-
 
 print(teste3.isalnum())
 print(teste4.isalnum())
@@ -362,13 +421,33 @@ print(teste.lower())
 print(teste5.upper())
 print(teste6.swapcase())
 
-teste8 = ('estudo de python')
+#-------------------------------------------------------------------------------------------#
+#title
+#-------------------------------------------------------------------------------------------#
 
+teste8 = ('estudo de python')
 print(teste8.title())
+
+#-------------------------------------------------------------------------------------------#
+#split
+#-------------------------------------------------------------------------------------------#
+
+teste8 = ('estudo de python')
 print(teste8.split())
 print(teste8.split('t'))
+
+#-------------------------------------------------------------------------------------------#
+#repalce
+#-------------------------------------------------------------------------------------------#
+
+teste8 = ('estudo de python')
 print(teste8.replace('python','programação'))
 
+#-------------------------------------------------------------------------------------------#
+#find
+#-------------------------------------------------------------------------------------------#
+
+teste2 = ('paralelepipido')
 print(teste2.find('e'))
 print(teste2.find('a'))
 print(teste2.find('p'))
