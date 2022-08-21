@@ -1,6 +1,7 @@
 #Função input()
 #Criando um erro
 #O python espera que o valor do input seja direcionado para uma variavel declarada
+
 input()
 valor1 = input()
 valor1
@@ -9,44 +10,60 @@ valor2
 
 #Se o usuário oferecer o valor float, exemplo = 2.0 o python irá declarar a variável como flot
 #Resolvendo este problema, podemos converter o valor utilizando conversores de outros tipos de dados
+
 valor2 = 2.0
 valor2
 type(valor2)
+
 #Convertendo abaixo o valor2  que é float em int.
+
 int(valor2)
 #O valor acima se oferecido em formato int convertido de float será imprimido em int, mas continuará float
 valor2
+
 #Para converter valor 2 de float para int definnitivamente, devemos trocar a informação da variavel:
 valor2 = int(valor2)
 valor2
+
 #Concatenando o conversor de tipos com a função input
 valor2 = int(input('Digite um valor'))
 valor2
 
 #Criando um erro
 int('2+5')
+
 #Com a função eval nós podemos converter os dados numericos entre '' em int.
 eval('2+5')
 valor3 = (2+5)
-#raw_input()
+
+#raw_input() é utilizado no python 2, se você programar o input no python 3 e rodar no python 2, dará problema.
 raw_input()
 valor4 = raw_input()
 valor4
 type(valor4)
 
+#não vamos estudar a função impor agora mas dá para driblar o problema com o seguinte código
+
+import sys
+
+if sys.version_info.major == 2:
+    usuario = raw_input(‘Insira seu login: ‘)
+elif sys.version_info.major == 3:
+    usuario = input(‘Insira seu login: ‘)
+    
 #Função format
 print('Eu gosto de {0} e {1}'.format('ecologia', 'aprender python'))
 print('Eu gosto de {1} e {0}'.format('ecologia', 'aprender python'))
+
 #Podemos com o .format especificar o nome da variavel que iremos declarar
 print('Ola {name}, {saudacao}'.format(saudacao = 'Bom dia!', name = 'Alex'))
+
 #Podemos com a função .format definir quantas casas decimais mostrar (Como o antigo recurso sprintf() usado na linguagem C)
 x = 1.54321
 x
 print('O valor de x e %3.2f' %x)
 print('O valor de x e %3.4f' %x)
 print('O valor de x e %3.5f' %x)
-
-
 
 #%s e %d
 endereco = raw_input('Digite o nome da rua: ')
@@ -59,34 +76,8 @@ quebrado = 2.9458039
 print 'numero e: %.2f' %quebrado
 
 
-#insert
-
-lista1 = [1,2,3,4,5,6,7,8,9]
-
-lista1.insert(10,70)
-
-#remove
-#remove por meio do dado
-
-lista1.remove(4)
-print(lista1)
-
-lista2 = ['geogragia','português','matemáica','história','biologia']
-lista2.pop(3)
-print(lista2)
 
 
-#sort
-#não retorna a lista
-lista2 = ['geogragia','português','matemáica','história','biologia']
-lista2.sort() # por isso é necessário aplicar primeiro e depois imprimir
-print(lista2)
-#print(lista.sort()) não funciona
-
-#sorted
-#imprime a lista
-lista2 = ['geogragia','português','matemáica','história','biologia']
-print(sorted(lista2))
 
 
 #Range
