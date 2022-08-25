@@ -1,4 +1,7 @@
+#===========================================================================================#
 #Função input()
+#===========================================================================================#
+
 #Criando um erro
 #O python espera que o valor do input seja direcionado para uma variavel declarada
 
@@ -11,38 +14,20 @@ valor2
 #Se o usuário oferecer o valor float, exemplo = 2.0 o python irá declarar a variável como flot
 #Resolvendo este problema, podemos converter o valor utilizando conversores de outros tipos de dados
 
-valor2 = 2.0
-valor2
-type(valor2)
-
-#Convertendo abaixo o valor2  que é float em int.
-
-int(valor2)
-#O valor acima se oferecido em formato int convertido de float será imprimido em int, mas continuará float
-valor2
-
-#Para converter valor 2 de float para int definnitivamente, devemos trocar a informação da variavel:
-valor2 = int(valor2)
-valor2
-
-#Concatenando o conversor de tipos com a função input
-valor2 = int(input('Digite um valor'))
-valor2
-
-#Criando um erro
-int('2+5')
-
-#Com a função eval nós podemos converter os dados numericos entre '' em int.
-eval('2+5')
-valor3 = (2+5)
+#-------------------------------------------------------------------------------------------#
+#raw_input
+#-------------------------------------------------------------------------------------------#
 
 #raw_input() é utilizado no python 2, se você programar o input no python 3 e rodar no python 2, dará problema.
-raw_input()
+
+
 valor4 = raw_input()
 valor4
 type(valor4)
 
-#não vamos estudar a função impor agora mas dá para driblar o problema com o seguinte código
+#-------------------------------------------------------------------------------------------#
+''não vamos estudar a função import nem a função if agora mas dá para 
+driblar o problema com o seguinte código''
 
 import sys
 
@@ -50,26 +35,60 @@ if sys.version_info.major == 2:
     usuario = raw_input(‘Insira seu login: ‘)
 elif sys.version_info.major == 3:
     usuario = input(‘Insira seu login: ‘)
-    
+#-------------------------------------------------------------------------------------------#    
+
+#-------------------------------------------------------------------------------------------#
+#Concatenando o conversor de tipos com a função input
+#-------------------------------------------------------------------------------------------#
+
+valor2 = int(input('Digite um valor'))
+valor2
+
+#Criando um erro
+int('2+5')
+
+#===========================================================================================#
+#eval
+#===========================================================================================#
+
+#Com a função eval nós podemos converter os dados numericos entre '' em int.
+eval('2+5')
+valor3 = (2+5)
+
+#===========================================================================================#
+#format
+#===========================================================================================#
+
 #Função format
 print('Eu gosto de {0} e {1}'.format('ecologia', 'aprender python'))
 print('Eu gosto de {1} e {0}'.format('ecologia', 'aprender python'))
 
-#Podemos com o .format especificar o nome da variavel que iremos declarar
-print('Ola {name}, {saudacao}'.format(saudacao = 'Bom dia!', name = 'Alex'))
 
-#Podemos com a função .format definir quantas casas decimais mostrar (Como o antigo recurso sprintf() usado na linguagem C)
+pergunta1 = input('Qual sua matéria favorita?')
+pergunta2 = input('Qual sua linguagem de programação favorita?')
+
+print('Eu gosto de {0} e {1}'.format(pergunta1, pergunta2))
+print('Eu gosto de {1} e {0}'.format(pergunta1, pergunta2))
+
+name = input('Qual o seu nome?')
+saudacao = ('Bom dia!')
+print('olá {0}, {1}'.format(name, saudacao))
+
+#-------------------------------------------------------------------------------------------#
+#% 'Definindo casas decimais)'
+#-------------------------------------------------------------------------------------------#
+
 x = 1.54321
 x
-print('O valor de x e %3.2f' %x)
-print('O valor de x e %3.4f' %x)
-print('O valor de x e %3.5f' %x)
+print('O valor de x é %3.2f' %x)
+print('O valor de x é %3.4f' %x)
+print('O valor de x é %3.5f' %x)
 
 #%s e %d
-endereco = raw_input('Digite o nome da rua: ')
+endereco = input('Digite o nome da rua: ')
 print('O endereco da rua e: %s e este dado contem %d caracteres') %(endereco, len(endereco))
 
-#Encortando números quebrados
+#Incortando números quebrados
 print 'numero quebrado %.2f' % 1.5834752389
 
 quebrado = 2.9458039
@@ -79,8 +98,10 @@ print 'numero e: %.2f' %quebrado
 
 
 
-
+#===========================================================================================#
 #Range
+#===========================================================================================#
+
 #parametros: INICIO | PARADA | INTERVALO
 
 lista6 = list(range(0,10))
@@ -92,8 +113,19 @@ print(lista6)
 lista6 = list(range(0,21,2))
 print(lista6)
 
-#range com #in
+#===========================================================================================#
+#for
+#===========================================================================================#
+https://www.alura.com.br/artigos/listas-no-python
 
+#===========================================================================================#
+#in
+#===========================================================================================#
+https://www.alura.com.br/artigos/listas-no-python
+
+#===========================================================================================#
+#range com #in
+#===========================================================================================#
 x = range(6)
 for n in x:
   print(n)
