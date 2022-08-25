@@ -827,15 +827,18 @@ lista2
 lista2 = {8, 6, 4, 10, 2}
 lista2
 
+#-------------------------------------------------------------------------------------------#
 #A função SET não aceita repetições, retirando na hora da impreção os números repetidos
+#-------------------------------------------------------------------------------------------#
+
 lista3 = {2, 2, 2, 4 , 4, 6, 8, 10}
 lista3
 
+#-------------------------------------------------------------------------------------------#
 #A função SET também não aceita filtrar os dados da lista com a função =[]
-lista3=[2]
+#-------------------------------------------------------------------------------------------#
 
-#Tratando os valores como convertidos entre os tipos de dados
-#Converter um valor de variavel int para str é possível
+lista3=[2]
 
 #===========================================================================================#
 CONVERSÃO
