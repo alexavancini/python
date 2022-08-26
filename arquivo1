@@ -360,11 +360,13 @@ print(type(variavel6))
 #Concatenar variáveis de valor string
 #-------------------------------------------------------------------------------------------#
 
-variavel5 + variavel6 (bio + logia)
+variavel5 = 'bio'
+variavel6 = 'logia'
+print(variavel5 + variavel6)
 
-variavel01 = ('palavra')
-print(variavel01)
-print('biologia')
+variavel7 = 10
+variavel8 = 20
+print(variavel7+variavel8)
 
 #===========================================================================================#
 #Sensitive
@@ -620,6 +622,7 @@ print(type(lista2) is tuple)
 #Alterando uma lista
 #===========================================================================================#
 
+lista1 = (2,4,6,8,10)
 lista1[2]=20
 
 #Lista tupple é uma lista fixa não modificada, definida nomomento da criação da variavel em lista, seu sinal é os ();
@@ -653,8 +656,8 @@ print(sum(lista2))
 
 #Inserindo valors na lista
 
-lista1 = [1,2,3,4,5,6,7,8,9]
-lista1.insert(10,70)
+lista3 = [1,2,3,4,5,6,7,8,9]
+lista3.insert(10,70)
 
 #===========================================================================================#
 #remove
@@ -662,9 +665,46 @@ lista1.insert(10,70)
 
 #removendo valores na lista
 #remove por meio do dado
+''deve ser utilizada apenas quando temos certeza que o valor está na lista, caso contrário
+retorna um erro''
 
+lista1 = [1,2,3,4,5,6,7,8,9,10]
 lista1.remove(4)
 print(lista1)
+
+lista1 = [1,2,3,4,5,6,7,8,9,10]
+lista1.remove(11)
+print(lista1)
+
+''Para resolver o problema de valor em listas [] podemos converter os valores em SET
+para imprimir e assim usar a opção DISCARD''
+
+#===========================================================================================#
+#discard
+#===========================================================================================#
+
+#descarta (remove) valores na lista desde que sejam SET {}
+#remove por meio do dado
+''pode ser utilizado quando não temos certeza se o valor está presente na lista,
+desta forma, não retorna erro como a opção REMOVE''
+
+lista1 = [1,2,3,4,5,6,7,8,9,10]
+lista1.discard(4)
+print(lista1) #erro pois o comenao .discard não atua em lista []
+
+lista1 = set([1,2,3,4,5,6,7,8,9,10])
+lista1.discard(4)
+print(lista1) #aceitável pois nesta caso foi passado o atributo SET {} na lista []
+
+#---------------------#
+#tentando remover um valor que não se encontra no intervalo declarado
+#---------------------#
+
+lista1 = set([1,2,3,4,5,6,7,8,9,10])
+lista1.discard(11)
+print(lista1) #aceitável pois nesta caso foi passado o atributo SET {} na lista []
+
+#Embora o 11 não esteja na lista, não foi retornado um erro como quando usado o REMOVE
 
 #===========================================================================================#
 #pop
@@ -676,6 +716,17 @@ lista2 = ['geogragia','português','matemáica','história','biologia']
 lista2.pop(3)
 print(lista2)
 
+
+#===========================================================================================#
+#clear
+#===========================================================================================#
+
+#removendo todos os valores de uma lista
+
+lista1 = set([1,2,3,4,5,6,7,8,9,10])
+lista1.clear()
+print(lista1) # quando imprimimos um conjunto vazio, Python imprime set()
+
 #===========================================================================================#
 #sort
 #===========================================================================================#
@@ -684,9 +735,22 @@ print(lista2)
 #não retorna a lista
 
 lista2 = ['geogragia','português','matemáica','história','biologia']
-lista2.sort() # por isso é necessário aplicar primeiro e depois imprimir
+lista2.sort() #É necessário aplicar primeiro e depois imprimir
 print(lista2)
-#print(lista.sort()) não funciona
+#print(lista2.sort()) #não funciona
+
+#---------------------#
+#exemplo
+#---------------------#
+lista3 = [1,2,3,5,6,7,8,9]
+lista3.insert(10,4)
+print(lista3)
+
+lista3 = [1,2,3,5,6,7,8,9]
+lista3.insert(10,4)
+lista3.sort()
+print(lista3)
+#---------------------#
 
 #===========================================================================================#
 #sorted
@@ -827,18 +891,105 @@ lista2
 lista2 = {8, 6, 4, 10, 2}
 lista2
 
+''mprimindo duas vezes uma variável com dados repetidos, um com SET e outro sem SET,
+como SET não aceita repetições, é retirado os valores repetidos na hora da impressão''
+
+numeros = [1, 2, 2, 3, 3, 3]
+numeros_distintos = set(numeros)
+
+print("Números: ", numeros) #impressão sem SET
+print("Números distintos: ", numeros_distintos) #impressão com SET
+
 #-------------------------------------------------------------------------------------------#
-#A função SET não aceita repetições, retirando na hora da impreção os números repetidos
+#A função SET não aceita filtrar os dados da lista com a função =[]
 #-------------------------------------------------------------------------------------------#
 
-lista3 = {2, 2, 2, 4 , 4, 6, 8, 10}
-lista3
+lista2 = {2, 4, 6, 8, 10}
+lista2=[2]
 
 #-------------------------------------------------------------------------------------------#
-#A função SET também não aceita filtrar os dados da lista com a função =[]
+.union
 #-------------------------------------------------------------------------------------------#
 
-lista3=[2]
+Concatenar duas listas SET com .union
+
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+print(a.union(b))
+
+#como o SET não aceita repetições, ele retira os valores repetidos na impressão.
+
+materias1 = {'português', 'matemática', 'biologia', 'geografia'}
+materias2 = {'matemática', 'história', 'biologia', 'inglês', 'português'}
+
+print(materias1)
+print(materias2)
+print(materias1.union(materias2))
+
+#---------------------#
+A = {0, 1, 3, 5, 7, 9}
+B = {0, 2, 4, 6, 8}
+C = A | B #forma alternativa de escrever materias1.union(materias2
+print(C)
+#---------------------#
+
+#-------------------------------------------------------------------------------------------#
+.union não pode ser utilizado em uma lista tuple
+#-------------------------------------------------------------------------------------------#
+
+lista0 = (2, 4, 6, 8, 10)
+lista1 = (8, 10, 12, 14, 16, 18, 20)
+print(lista0.union(lista1)) #não é aceitável
+#print(lista0 + lista1) #aceitável
+
+#-------------------------------------------------------------------------------------------#
+lista2 = {2, 4, 6, 8, 10}
+lista3 = {8, 10, 12, 14, 16, 18, 20}
+print(lista2.union(lista3))
+
+#-------------------------------------------------------------------------------------------#
+.intersection
+#-------------------------------------------------------------------------------------------#
+
+materias1 = {'português', 'matemática', 'biologia', 'geografia'}
+materias2 = {'matemática', 'história', 'biologia', 'inglês', 'português'}
+
+
+print(materias1.intersection(materias2))
+
+''Com o .intersection é retornado apenas os valores interseccionados, 
+ou seja, que eles têm em comum''
+
+#---------------------#
+conjunto1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+conjunto2 = {5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+
+print(conjunto1.intersection(conjunto2))
+print(conjunto1 & conjunto2) #forma alternativa de escrever conjuno1.intersection(conjunto2)
+
+
+A = {0, 1, 3, 5, 7, 9}
+B = {0, 2, 4, 6, 8, 9}
+print(A.intersection(B))
+C = A & B #forma alternativa de escrever A.intersection(B)
+print(C)
+print(A & B)
+
+#---------------------#
+
+#-------------------------------------------------------------------------------------------#
+- diferença
+#-------------------------------------------------------------------------------------------#
+
+
+A = {0, 1, 2, 3, 5, 7, 9}
+B = {0, 1, 2, 4, 6, 8, 9}
+
+C = A - B 
+D = B - A
+
+print(C)
+print(D)
 
 #===========================================================================================#
 CONVERSÃO
