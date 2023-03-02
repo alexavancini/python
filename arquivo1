@@ -107,10 +107,13 @@ print('Helow, World!') #Linha3, Inglês
 print('Halo, Welt!') #Linha4, alemão
 print('Bonjour, le monde!') #Linha 5, francês
 
+#===========================================================================================#
+#variáveis
+#===========================================================================================#
 
-#===========================================================================================#
+#-------------------------------------------------------------------------------------------#
 #Atribuição - =
-#===========================================================================================#
+#-------------------------------------------------------------------------------------------#
 
 a = 10
 print(a)
@@ -119,9 +122,33 @@ a = b = 20
 print(a)
 print(b)
 
-#===========================================================================================#
-#variáveis
-#===========================================================================================#
+type(a)
+type(b)
+
+c = 5.5
+d = 'python'
+print(c)
+print(d)
+
+type(c)
+type(d)
+
+
+''''Python é uma linguagem de programação com declaração de variável dinâmica,
+O que significa que o interpretador detecta o tipo da variável automaticamente,
+o programador, nesta linguagem, não precisa declarar o tipo da variável no momento
+da declaração. Isto não ocorre em todas as linguagens de programação disponíveis. ''''
+
+#-------------------------------------------------------------------------------------------#
+#Atribuindo valores a várias variáveis
+#-------------------------------------------------------------------------------------------#
+
+
+idade_rafael, idade_marcos, idade_lucas = 15,20,30
+print(idade_rafael, idade_marcos, idade_lucas)
+
+end_rafael, end_marcos, end_lucas = 'Rua dos ipes', 'Rua das margaridas', 'Rua das araucarias'
+print(end_rafael, end_marcos, end_lucas)
 
 #-------------------------------------------------------------------------------------------#
 #Sensitive
@@ -132,6 +159,9 @@ print(b)
 
 c1 = Centro-1
 C1 = Correspondencia-1
+
+c1
+C1
 
 #-------------------------------------------------------------------------------------------#
 #valor inteiro (int)
@@ -163,6 +193,58 @@ valor1 + variavel2
 variavel3 * valor2
 valor3 / variavel1
 
+#-------------------------------------------------------------------------------------------#
+#valor decimal (float)
+#-------------------------------------------------------------------------------------------#
+
+(...)
+
+#-------------------------------------------------------------------------------------------#
+#valor hexadecimal (hex)
+#-------------------------------------------------------------------------------------------#
+
+(...)
+
+#-------------------------------------------------------------------------------------------#
+#valor binário (bin)
+#-------------------------------------------------------------------------------------------#
+
+(...)
+
+#-------------------------------------------------------------------------------------------#
+#valor texto (string)
+#-------------------------------------------------------------------------------------------#
+
+(...)
+
+
+
+#===========================================================================================#
+#Operadores aritiméticos
+#===========================================================================================#
+
++ Soma
+- Subtração
+* Multiplicação
+/ Divisão, retorna um valor decimal (float)
+// Divisão retorna um valor inteiro (int)
+** Exponenciação
+% Módulo, retorna o resto da divisão
+
+
+variavel1 + variavel2
+variavel1 - variavel2
+variavel1 * variavel2
+variavel1 / variavel2
+
+variavel1 + variavel2 + variavel3
+variavel1 + (variavel2*variavel3)
+variavel1 + (variavel2/variavel3*variavel1)
+
+5**3 #exponenciação
+10//9 #extração da parte inteira da divisão
+7%2 #módulo (retorna o resto da divisão)
+
 #===========================================================================================#
 #Uso de () nas operações
 #===========================================================================================#
@@ -171,16 +253,6 @@ valor3 / variavel1
 
 (variavel1 + valor2) / variavel3
 variavel1 + valor2 / variavel3
-
-#===========================================================================================#
-#Atribuindo valores a várias variáveis
-#===========================================================================================#
-
-idade_rafael, idade_marcos, idade_lucas = 15,20,30
-print(idade_rafael, idade_marcos, idade_lucas)
-
-end_rafael, end_marcos, end_lucas = 'Rua dos ipes', 'Rua das margaridas', 'Rua das araucarias'
-print(end_rafael, end_marcos, end_lucas)
 
 #===========================================================================================#
 #Print com texto e valor de variáveis junto
@@ -229,18 +301,6 @@ print(var1,var2,var3, var4, var5)
 cod1 = 7654321
 1cod = 7654321 #erro
 
-#Operadores aritiméticos
-variavel1 + variavel2
-variavel1 - variavel2
-variavel1 * variavel2
-variavel1 / variavel2
-
-variavel1 + variavel2 + variavel3
-variavel1 + (variavel2*variavel3)
-variavel1 + (variavel2/variavel3*variavel1)
-5**3 #exponenciação
-10//9 #extração da parte inteira da divisão
-7%2 #módulo (retorna o resto da divisão)
 
 
 #===========================================================================================#
@@ -383,12 +443,15 @@ String - str
 #===========================================================================================#
 
 variavel4 = 'palavra'
-variavel5 = 'bio'
+variavel5 = "bio"
 variavel6 = 'logia'
 
 print(type(variavel4))
 print(type(variavel5))
 print(type(variavel6))
+
+''Em python é possível declarar uma variável do tipo string com aspas simples
+ou aspas duplas.''
 
 #-------------------------------------------------------------------------------------------#
 #Concatenar variáveis de valor string
@@ -427,6 +490,31 @@ estudo python = 2
 #===========================================================================================#
 #manipulação de strings
 #===========================================================================================#
+
+#-------------------------------------------------------------------------------------------#
+#Indexação
+#-------------------------------------------------------------------------------------------#
+
+string1 = 'Biologia'
+string1[1]
+string1[0]
+string1[5]
+string1[7]
+
+len(string1)
+
+''A indexação em python começa com zero (0). Isso pode não ocorrer em outras linguagens
+Por exemplo: em linguagem R começa em 1''
+
+palavra = 'Geografia'
+palavra
+palavra[2]
+palavra[4:]
+palavra [3:6]
+
+#Gerando um erro
+#String são inalterados em python
+palavra [1]='y'
 
 #-------------------------------------------------------------------------------------------#
 #len
@@ -914,18 +1002,7 @@ print(sum(lista12)/(len(lista12)))
 media_lista12 = soma_lista_12 / tam_lista_12
 print(media_lista12)
 
-#===========================================================================================#
-#String
-#===========================================================================================#
 
-palavra = 'biologia'
-palavra
-palavra[2]
-palavra[4:]
-palavra [3:6]
-#Gerando um erro
-#String são inalterados em python
-palavra [1]='y'
 
 #===========================================================================================#
 #set {}
@@ -1100,7 +1177,7 @@ print(hex(1000000000))
 #impossivel converter float ou string para hexadecimal, apenas inteiro.
 
 #-------------------------------------------------------------------------------------------#
-#Convertendo um valor em binario - o / 1
+#Convertendo um valor em binario - 0 ou 1
 #-------------------------------------------------------------------------------------------#
 
 print(bin(80))
