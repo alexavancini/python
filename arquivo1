@@ -453,6 +453,7 @@ print(type(variavel6))
 ''Em python é possível declarar uma variável do tipo string com aspas simples
 ou aspas duplas.''
 
+
 #-------------------------------------------------------------------------------------------#
 #Concatenar variáveis de valor string
 #-------------------------------------------------------------------------------------------#
@@ -495,6 +496,10 @@ estudo python = 2
 #Indexação
 #-------------------------------------------------------------------------------------------#
 
+
+''A indexação em python começa com zero (0). Isso pode não ocorrer em outras linguagens
+Por exemplo: em linguagem R começa em 1''
+
 string1 = 'Biologia'
 string1[1]
 string1[0]
@@ -503,11 +508,19 @@ string1[7]
 
 len(string1)
 
-''A indexação em python começa com zero (0). Isso pode não ocorrer em outras linguagens
-Por exemplo: em linguagem R começa em 1''
+
+''É possível, também, referenciar a uma string com número negativo. 
+Assim, -1 será o último caracter''
+
+string1[-1]
+string1[-2]
+string1[-6]
+
+''Fatiamento''
 
 palavra = 'Geografia'
 palavra
+
 palavra[2]
 palavra[4:]
 palavra [3:6]
