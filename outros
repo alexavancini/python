@@ -68,6 +68,13 @@ Divmod (divisão por número inteiro)
 divmod(10,6)
 divmod(3,2)
 
+======
+
+j = raiz de menos 1
+
+9j = 9 vezes raiz d menos 1 (não há a necessidade do sinal multiplicador)
+
+
 
 
 
