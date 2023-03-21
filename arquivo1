@@ -525,6 +525,21 @@ palavra[2]
 palavra[4:]
 palavra [3:6]
 
+palavra[:] 'Imprimir a palavra inteira'
+palavra[::2] 'Imprimi de duas em duas letras
+palavra[::3] 'Imprimi de três em três letras
+palavra[::4] 'Imprimi de quatro em quatro letras
+
+palavra[1::2] 'Imprimi de dois em dois carácteres começando pelo índice 1'
+palavra[2::2] 'Imprimi de dois em dois carácteres começando pelo índice 2'
+
+palavra[::-2] 'Imprimi de dois em dois carácteres começando pelo índice -1, vogais'
+palavra[-2::-2] 'Imprimi de dois em dois carácteres começando pelo índice -, cons.'
+
+palavra[::-1] 'Inverte a palavra)
+palavra[-5::-1] 'Inverte a palavra dentro do intervalo selecinado'
+
+
 #Gerando um erro
 #String são inalterados em python
 palavra [1]='y'
