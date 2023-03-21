@@ -629,6 +629,12 @@ print(teste8.split('t'))
 
 teste8 = ('estudo de python')
 print(teste8.replace('python','programação'))
+teste8
+
+teste8 = teste8.replace('python','programação')
+teste8
+
+
 
 #-------------------------------------------------------------------------------------------#
 #find
