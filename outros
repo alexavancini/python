@@ -41,3 +41,34 @@ inicio = timeit.default_timer()
 alguma_funcao()
 fim = timeit.default_timer()
 print ('duracao: %f' % (fim - inicio))
+
+
+função pow (exponenciação)
+
+pow(2,3)
+dois elevado a terceira potencia
+
+extrair a raiz quadrada com pow: raiz quadrada é qualquer número elevado a meio
+
+=====
+pow(16,1,2)
+
+2**3 (a mesma coisa)
+2**1,2
+
+======
+Round (arredondamento)
+
+round (5/6,3)
+round 1/3, 6)
+
+======
+Divmod (divisão por número inteiro)
+
+divmod(10,6)
+divmod(3,2)
+
+
+
+
+
